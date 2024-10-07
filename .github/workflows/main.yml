@@ -7,7 +7,7 @@ jobs:
       - image:${{ matrix.os }}
       - instance-size:${{ matrix.size }}
       - fleet:myFleet
-      - buildspec-override:true
+      - buildspec-override:false
     strategy:
       matrix:
         include:
