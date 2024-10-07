@@ -16,4 +16,4 @@ jobs:
           - os: al2-5.0
             size: large
     steps:
-      - run: echo "Hello World!"
+      - run: echo "Hello World! GH Actions"
