@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on:
-      - codebuild-TestCodeHub-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-ManualAuto-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
     - uses: actions/checkout@v2
