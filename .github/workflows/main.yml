@@ -15,6 +15,6 @@ jobs:
     - name: Run your build steps
       run: |
         # Your build commands go here
-        echo "Building with CodeBuild GH Actions"
+        echo "Building with CodeBuild GH Actions here"
         # Add more build steps as needed here
 
