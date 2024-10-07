@@ -1,19 +1,20 @@
-name: Hello World
-on: [push]
+name: My Workflow
+
+on:
+  push:
+    branches: [ main ]
+
 jobs:
-  Hello-World-Job:
+  build:
     runs-on:
       - codebuild-TestCodeHub-${{ github.run_id }}-${{ github.run_attempt }}
-      - image:${{ matrix.os }}
-      - instance-size:${{ matrix.size }}
-      - fleet:myFleet
-      - buildspec-override:false
-    strategy:
-      matrix:
-        include:
-          - os: arm-3.0
-            size: small
-          - os: al2-5.0
-            size: large
+
     steps:
-      - run: echo "Hello World! GH Actions"
+    - uses: actions/checkout@v2
+    
+    - name: Run your build steps
+      run: |
+        # Your build commands go here
+        echo "Building with CodeBuild GH Actions"
+        # Add more build steps as needed
+
